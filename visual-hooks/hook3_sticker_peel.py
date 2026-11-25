@@ -5,8 +5,8 @@ You pop up as a die-cut sticker (thick white outline, drop shadow), then the
 scene is peeled like a sticker sheet: a white paper flap sweeps from the
 bottom of the frame to the top, and you appear under it, already talking.
 
-YOU MUST FILM (TRIPOD, never moves, exposure locked):
-  1. EMPTY plate, 3 s: the spot with nobody in it.
+YOU MUST FILM (TRIPOD, never moves, exposure locked, HDR Video OFF):
+  1. EMPTY plate, 3 s of VIDEO: the spot with nobody in it.
   2. TALKING take: sit in that spot and start your line in the first second.
   Optional, for the real-hand version in the original reel: film your hand
   pinching and pulling up toward the top-right corner against a green wall
@@ -27,7 +27,7 @@ import math
 import cv2
 import numpy as np
 
-from common import OUT_FPS, comp, ease_in_out, person_mask, read_clip, still, write_video
+from common import OUT_FPS, comp, ease_in_out, iter_clip, peek, person_mask, still, write_video
 
 
 def sticker_frame(person, empty, mask, t, stroke=26):
@@ -48,7 +48,8 @@ def sticker_frame(person, empty, mask, t, stroke=26):
     M = cv2.getRotationMatrix2D((float(xs.mean()), float(ys.mean())), rot, s)
     color = cv2.warpAffine(color, M, (w, h), borderValue=(255, 255, 255))
     alpha = cv2.warpAffine(outline, M, (w, h)) * min(1.0, t / 0.12)
-    shadow = cv2.GaussianBlur(np.roll(alpha, (22, 12), (0, 1)), (51, 51), 0) * 0.45
+    shifted = cv2.warpAffine(alpha, np.float32([[1, 0, 12], [0, 1, 22]]), (w, h))  # offset, no wrap-around
+    shadow = cv2.GaussianBlur(shifted, (51, 51), 0) * 0.45
 
     bg = cv2.GaussianBlur(empty, (0, 0), 6)
     bg = cv2.addWeighted(bg, 0.75, np.full_like(bg, 235), 0.25, 0)
@@ -70,17 +71,17 @@ def main():
     a = p.parse_args()
 
     empty = still(a.empty, at=0.5)
-    talk = read_clip(a.talking, a.talk_start, a.talk_end)
-    h, w = talk[0].shape[:2]
-    out = []
+    first, talk = peek(iter_clip(a.talking, a.talk_start, a.talk_end))
+    h, w = first.shape[:2]
+    intro = []
 
     # 1) die-cut sticker pop (frozen first frame of you)
     if a.intro > 0:
-        m = person_mask(talk[0], empty, a.thresh, feather=2)
+        m = person_mask(first, empty, a.thresh, feather=2)
         if m.max() < 0.5:
             raise SystemExit("Could not find you against the empty plate. Tripod moved or light changed? Try --thresh 18.")
         n = int(a.intro * OUT_FPS)
-        out += [sticker_frame(talk[0], empty, m, i / n * 1.0) for i in range(n)]
+        intro = [sticker_frame(first, empty, m, i / n) for i in range(n)]
 
     # 2) peel: edge travels bottom -> top
     th = math.radians(a.angle)
@@ -94,35 +95,38 @@ def main():
     flap_max = h * 0.11
 
     n_peel = int(a.peel * OUT_FPS)
-    for i, f in enumerate(talk):
-        if i >= n_peel:
-            out.append(f)
-            continue
-        x = ease_in_out((i + 1) / n_peel)
-        fh = flap_max * (0.3 + 0.7 * math.sin(math.pi * x))      # flap lifts, then lies flat at the top
-        d = lo - fh + (hi - lo + 2 * fh) * x
-        curl = fh * (1 - 0.35 * np.clip((along - a_mid) / a_half, -1, 1) ** 2)  # curved lip of the flap
 
-        revealed = np.clip((d - proj) / 2.0, 0, 1)                   # under the edge: you
-        frame = comp(f, empty, revealed)
+    def frames():
+        yield from intro
+        for i, f in enumerate(talk):
+            if i >= n_peel:
+                yield f
+                continue
+            x = ease_in_out((i + 1) / n_peel)
+            fh = flap_max * (0.3 + 0.7 * math.sin(math.pi * x))      # flap lifts, then lies flat at the top
+            d = lo - fh + (hi - lo + 2 * fh) * x
+            curl = fh * (1 - 0.35 * np.clip((along - a_mid) / a_half, -1, 1) ** 2)  # curved lip of the flap
 
-        # soft shadow cast by the flap onto the revealed area
-        shadow = np.clip(1 - (d - proj) / (fh * 0.9 + 1), 0, 1) * revealed * 0.35
-        frame = comp(np.zeros_like(frame), frame, shadow)
+            revealed = np.clip((d - proj) / 2.0, 0, 1)                   # under the edge: you
+            frame = comp(f, empty, revealed)
 
-        # the white back of the sticker
-        rel = (proj - d) / np.maximum(curl, 1)
-        flap = ((rel >= 0) & (rel <= 1)).astype(np.float32)
-        flap = cv2.GaussianBlur(flap, (3, 3), 0)
-        shade = (205 + 50 * np.clip(rel, 0, 1)).astype(np.uint8)    # darker at the fold, bright at the lip
-        paper = np.dstack([shade, shade, shade])
-        lip_shadow = np.clip(1 - (rel - 1) * 4, 0, 1) * (rel > 1) * 0.3  # shadow the lip casts ahead of it
-        frame = comp(np.zeros_like(frame), frame, lip_shadow.astype(np.float32))
-        frame = comp(paper, frame, flap)
-        out.append(frame)
+            # soft shadow cast by the flap onto the revealed area
+            shadow = np.clip(1 - (d - proj) / (fh * 0.9 + 1), 0, 1) * revealed * 0.35
+            frame = comp(np.zeros_like(frame), frame, shadow)
 
-    start_out = len(out) - len(talk)
-    write_video(out, a.out, audio=[(a.talking, a.talk_start, start_out / OUT_FPS, len(talk) / OUT_FPS)])
+            # the white back of the sticker
+            rel = (proj - d) / np.maximum(curl, 1)
+            flap = ((rel >= 0) & (rel <= 1)).astype(np.float32)
+            flap = cv2.GaussianBlur(flap, (3, 3), 0)
+            shade = (205 + 50 * np.clip(rel, 0, 1)).astype(np.uint8)    # darker at the fold, bright at the lip
+            paper = np.dstack([shade, shade, shade])
+            lip_shadow = np.clip(1 - (rel - 1) * 4, 0, 1) * (rel > 1) * 0.3  # shadow the lip casts ahead of it
+            frame = comp(np.zeros_like(frame), frame, lip_shadow.astype(np.float32))
+            frame = comp(paper, frame, flap)
+            yield frame
+
+    dur = (a.talk_end - a.talk_start) if a.talk_end is not None else None
+    write_video(frames(), a.out, audio=[(a.talking, a.talk_start, len(intro) / OUT_FPS, dur)])
 
 
 if __name__ == "__main__":
