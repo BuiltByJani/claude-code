@@ -100,5 +100,6 @@ def main():
     dur = (a.talk_end - a.talk_start) if a.talk_end is not None else None
     write_video(frames(), a.out, audio=[(a.talking, a.talk_start, len(intro) / OUT_FPS, dur)])
 
+
 if __name__ == "__main__":
     main()
