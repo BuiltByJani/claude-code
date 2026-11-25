@@ -50,24 +50,29 @@ If the file is missing (for example in claude.ai), run the same six checks by
 hand from the list below. Each problem gets FLAG plus the fix. Fix every FLAG
 or say out loud why it stays.
 
-1. **Number with no source.** Any percent, "studies show" or statistic needs a
-   named source and year in Jani's notes, or it gets cut. Her own confirmed
+1. **Number with no source.** Any percent, "9 out of 10", "most women",
+   "studies show" or "research says" needs a named source and year in the same
+   sentence, or it gets cut. Her own confirmed
    numbers are fine.
 2. **Quote-card slogans.** Lines like "Your worth is not up for negotiation"
    that could be pasted on anyone's post. This is the biggest AI tell in her
-   niche. Keep at most one per piece, and follow it right away with a concrete
-   moment ("like when he said you were too much and you shrank").
+   niche. Keep at most one per piece, and put a concrete moment right next to it
+   ("like when he said you were too much and you shrank"). Her CTA lines
+   ("Comment WORTH", "Follow me", "Save this") never count as slogans.
 3. **"Every woman" claims.** "Every woman", "all of us", "women everywhere",
-   "everyone". Rewrite to "you". (Her emphatic "never" and "always" are voice,
-   not a problem. Leave them.)
+   "every other girl", "you guys", "ladies". Rewrite to "you". (Her emphatic
+   "never" and "always" are voice, not a problem. So is "everyone told me".)
 4. **Benefit stacking.** Three or more sentences in a row that start the same
    way ("It helps... It gives... It makes..." or "You'll... You'll...
    You'll..."). Cut the list by half and add one honest limit ("it will not fix
-   this overnight").
-5. **Buzzwords.** unlock, game-changer, level up your life, transform, journey,
-   dive into, revolutionize, next level, at scale. Swap for plain words.
+   this overnight"). Lines that start with "You", "Your" or "Stop" are her voice
+   and are not counted.
+5. **Buzzwords /ig-human misses.** transform, next level, at scale, dive into,
+   "the future of". (`/ig-human` already strips unlock, journey, game-changer,
+   level up, elevate, empower and the like.) Swap for plain words.
    **Exception:** her required line that AI is the future and she should learn
-   it to build her brand stays. Say it plainly, in her words.
+   it to build her brand stays. Say it plainly, in her words. Only that phrase
+   is excused, not other buzzwords in the same sentence.
 6. **No real detail.** Every piece needs one specific, true, physical moment:
    a time, a place, a thing said. If Jani has not given one, use the viewer's
    moment ("you, 11pm, deleting the post before anyone sees it"). Never make

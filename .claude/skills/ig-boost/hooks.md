@@ -13,7 +13,7 @@ Spoken line and on-screen line are written separately, as in `/ig-reel`.
 **Template:** If I had to start {the thing} from zero tomorrow and wanted {result} by {timeframe}, here is exactly what I'd do.
 **Example:** If I had to start my personal brand from zero tomorrow and wanted my first paid offer in 90 days, here's exactly what I'd do.
 **Pillar:** Personal brand + AI, Paid to be you
-**On-screen:** Starting from zero. 90 days. Here's the plan.
+**On-screen:** From zero. 90 days.
 **Ruined by:** a plan with no first step she could do tonight. Keep it about building a brand, not her past.
 
 ### B2. The silent habit
@@ -32,14 +32,14 @@ Spoken line and on-screen line are written separately, as in `/ig-reel`.
 
 ### B4. The skipped step
 **Template:** Skip this one step in {process} and you'll {bad outcome}.
-**Example:** Skip this one step when you post about yourself and you'll blend in with every other girl on your feed.
+**Example:** Skip this one step when you post about yourself and you'll blend into the rest of your feed.
 **Pillar:** Personal brand + AI
-**On-screen:** The step everyone skips.
+**On-screen:** The step you skip.
 **Ruined by:** a step that's vague ("be authentic"). Name it.
 
-### B5. The easiest way to lose
-**Template:** The easiest way to {bad outcome} is to {thing people think is harmless}.
-**Example:** The easiest way to stay invisible is to wait until you feel ready.
+### B5. Keep doing it
+**Template:** Keep {thing people think is harmless} and {bad outcome} is exactly where you'll be.
+**Example:** Keep waiting until you feel ready and invisible is exactly where you'll be next year.
 **Pillar:** Becoming, Confidence
 **On-screen:** Waiting = invisible.
 **Ruined by:** a harmless thing that's actually obviously bad. It has to feel innocent.
@@ -55,7 +55,7 @@ Spoken line and on-screen line are written separately, as in `/ig-reel`.
 **Template:** Don't tell me {the excuse she hears}.
 **Example:** Don't tell me you don't have time. You had time to watch this.
 **Pillar:** Habits, Becoming
-**On-screen:** Don't tell me you don't have time.
+**On-screen:** No time? Watch this.
 **Ruined by:** sounding mean instead of like a friend calling you out. Tone is everything. Say it smiling.
 
 ### B8. Want vs need
@@ -74,31 +74,31 @@ Spoken line and on-screen line are written separately, as in `/ig-reel`.
 
 ### B10. Love it, but
 **Template:** I love {thing} but {the part that sucks} kind of sucks, so here's what I do.
-**Example:** I love posting, but the comparison part kind of sucks, so here's what I do.
+**Example:** I love posting, but {the part Jani says sucks} kind of sucks, so here's what I do.
 **Pillar:** Personal brand + AI, Letting go
 **On-screen:** The part nobody likes.
-**Ruined by:** "what I do" being something Jani doesn't actually do. Confirm with her.
+**Ruined by:** a struggle or a method Jani hasn't confirmed. Ask her for both.
 
 ### B11. The green flag
-**Template:** The biggest green flag that you're about to {level up} is {the sign}.
-**Example:** The biggest green flag that you're about to change your life is that your old life starts feeling small.
+**Template:** If {the sign}, that's your green flag. You're about to {big change}.
+**Example:** If your old life starts feeling small, that's your green flag. You're about to change it.
 **Pillar:** Becoming, Letting go
 **On-screen:** Green flag you're about to change.
 **Ruined by:** a sign so general it applies to everyone ("you want more").
 
 ### B12. Everyone says, nobody shows
-**Template:** Everyone tells you to {popular advice}. Nobody shows you how. Here's the {N}-step version. Save it.
-**Example:** Everyone tells you to know your worth. Nobody shows you how. Here's the three-step version. Save it.
-**Pillar:** Self-worth (best as a carousel, ends with save)
+**Template:** Everyone tells you to {popular advice}. Nobody shows you how. Here's the {N}-step version.
+**Example:** Everyone tells you to know your worth. Nobody shows you how. Here's the three-step version.
+**Pillar:** Self-worth (best as a carousel; the save ask goes at the end, never in the hook)
 **On-screen:** Know your worth: the how.
 **Ruined by:** steps that are just more advice. Each step is an action.
 
 ### B13. Turn this into that
 **Template:** Here's how you turn {what she already has} into {income or result}.
-**Example:** Here's how you turn the story you're embarrassed about into the reason women follow you.
+**Example:** Here's how you turn the thing you're already good at into the reason women follow you.
 **Pillar:** Paid to be you, Personal brand + AI
 **On-screen:** Your story = your brand.
-**Ruined by:** pushing women to share pain for content. Keep it on who they've become.
+**Ruined by:** pushing women to share pain for content. Keep it on what they have now.
 
 ### B14. Remember this rule
 **Template:** Remember this rule for your next {situation}: {short, odd rule}.
@@ -118,5 +118,5 @@ Spoken line and on-screen line are written separately, as in `/ig-reel`.
 **Template:** It took me {Jani's real number} to {learn the thing}. Here are the {N} lessons in {seconds}.
 **Example:** It took me {Jani's real number of years} to stop shrinking for people. Here are three lessons in 30 seconds.
 **Pillar:** Self-worth, Becoming
-**On-screen:** {N} years. 3 lessons.
+**On-screen:** {Jani's number}. 3 lessons.
 **Ruined by:** a made-up number. Ask Jani for hers. Never guess.
