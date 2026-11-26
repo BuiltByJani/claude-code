@@ -5,15 +5,17 @@ ONE gold keyword per card (numbers, money words, emotion words), 4-frame pop-in.
 
     python3 srt2ass.py captions.srt captions.ass [--words 3]
 
-Add your own power words to KEYWORDS below or mark one in the .srt with *asterisks*.
+Add your own power words to TIERS below or mark one in the .srt with *asterisks*.
 """
-import re, sys, argparse
+import math, re, sys, argparse
 
-KEYWORDS = {
-    "worth", "money", "paid", "free", "never", "stop", "always", "yours", "own",
-    "confidence", "confident", "rich", "raise", "price", "invoice", "boss", "boundaries",
-    "enough", "secret", "nobody", "mistake", "wrong", "first", "only", "today", "deserve",
-}
+# Ranked: earlier tiers win over later tiers in the same card.
+TIERS = [
+    {"money", "paid", "price", "prices", "invoice", "raise", "rate", "rates", "rich", "profit", "income"},
+    {"worth", "confidence", "confident", "deserve", "enough", "yours", "own", "boundaries", "boss"},
+    {"stop", "never", "wrong", "mistake", "nobody", "secret", "free"},
+    {"always", "first", "only", "today"},
+]
 NUM = re.compile(r"[$£€]?\d[\d,.]*[kKmM%x]?")
 TS = re.compile(r"(\d+):(\d+):(\d+)[,.](\d+)")
 
@@ -21,7 +23,7 @@ HEADER = """[Script Info]
 ScriptType: v4.00+
 PlayResX: 1080
 PlayResY: 1920
-WrapStyle: 2
+WrapStyle: 0
 ScaledBorderAndShadow: yes
 
 [V4+ Styles]
@@ -53,22 +55,39 @@ def parse_srt(text):
         if idx is None:
             continue
         a, b = lines[idx].split("-->")
-        words = " ".join(lines[idx + 1:]).split()
+        text = re.sub(r"<[^>]+>|\{[^}]*\}", "", " ".join(lines[idx + 1:]))
+        words = text.split()
         if words:
             yield secs(a), secs(b), words
 
 
+def bare(w):
+    return re.sub(r"[^\w$£€%.,]", "", w).strip(".,").lower()
+
+
 def pick_keyword(words):
-    for i, w in enumerate(words):
-        if w.startswith("*") and w.rstrip(".,!?").endswith("*"):
+    for i, w in enumerate(words):          # *marked* by you always wins
+        if "*" in w:
             return i
-    for i, w in enumerate(words):
-        if NUM.fullmatch(w.strip(".,!?\"'")):
+    for i, w in enumerate(words):          # then numbers / money amounts
+        if NUM.fullmatch(bare(w)):
             return i
-    for i, w in enumerate(words):
-        if w.lower().strip(".,!?\"'") in KEYWORDS:
-            return i
+    for tier in TIERS:
+        for i, w in enumerate(words):
+            if re.sub(r"\W", "", w).lower() in tier:
+                return i
     return None
+
+
+def chunk(words, n):
+    """Split into balanced cards of at most n words, so no word is left alone at the end."""
+    k = math.ceil(len(words) / n)
+    base, extra = divmod(len(words), k)
+    out, i = [], 0
+    for c in range(k):
+        size = base + (1 if c < extra else 0)
+        out.append(words[i:i + size]); i += size
+    return out
 
 
 def render(words):
@@ -88,10 +107,12 @@ def main():
     n = max(2, min(4, a.words))
     events = []
     for start, end, words in parse_srt(open(a.srt, encoding="utf-8-sig").read()):
-        chunks = [words[i:i + n] for i in range(0, len(words), n)]
-        step = (end - start) / len(chunks)
-        for j, c in enumerate(chunks):
-            s, e = start + j * step, start + (j + 1) * step
+        chunks = chunk(words, n)
+        weights = [sum(len(w) for w in c) + len(c) for c in chunks]
+        total, t = sum(weights), start
+        for c, wt in zip(chunks, weights):
+            s, e = t, t + (end - start) * wt / total
+            t = e
             events.append(f"Dialogue: 0,{ass_time(s)},{ass_time(e)},House,,0,0,0,,{render(c)}")
     if not events:
         sys.exit("no captions found in " + a.srt)

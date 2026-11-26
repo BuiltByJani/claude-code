@@ -22,16 +22,18 @@ White on coral is 3.6:1, so coral only goes under big bold text.
 ## Setup on your computer (one time)
 
 ```bash
-# Mac
-brew install ffmpeg
+# Mac: plain "ffmpeg" from Homebrew can't draw text or captions anymore, so use ffmpeg-full
+brew install ffmpeg-full
 # fonts: download Anton, Montserrat, Playfair Display and Inter from fonts.google.com and install them
 chmod +x creative-system/edit-codes/reel.sh
+creative-system/edit-codes/reel.sh check     # says "ready" or tells you exactly what's missing
 ```
 
-`reel.sh` warns you if a font is missing instead of failing silently.
+`reel.sh` warns you when a brand font is missing, and stops with the install command when your ffmpeg can't draw text.
 
-## Tested
+## Tested (on Linux with ffmpeg 6.1, not yet on your Mac)
 
-Every `reel.sh` command was run on a test clip: reframe, blurfill, grade, loudness
-(measured -14.0 LUFS), punch, hook (including `:` `%` `'` in the text), captions,
-music ducking, end card, export, and the full `all` pipeline (1080x1920 H.264 + AAC).
+Every command was run on 16:9, 9:16 with no audio, 4:3 at 25fps and 720x1280 clips, with spaces and
+apostrophes in the file names. Voice measured -14.0 LUFS. Output was 1080x1920 at 30fps every time.
+It was written to work with the bash 3.2 and BSD tools a Mac ships with. Run `./reel.sh check` on your
+Mac first. Fonts on this test machine were fallbacks, so check the look again once Anton and Montserrat are installed.

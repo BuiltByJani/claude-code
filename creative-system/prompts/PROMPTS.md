@@ -20,14 +20,16 @@ HOUSE RULES (non-negotiable):
 - Body: one idea per beat, and the frame changes every 1.5-3s (cut, punch-in 105-112%, or B-roll). Nothing static past 4s.
 - Last 3s: pay off exactly what the hook promised, then ONE ask. The last line echoes a word from the hook so the loop replays clean.
 - Length 15-45s unless told otherwise.
-- Captions: Montserrat ExtraBold 78px, white, 6px #1A1220 outline, 2-4 words per card, max 2 lines, ONE gold (#C9A24A) keyword per card (a number, a money word, or an emotion). Pop-in 4 frames. No karaoke rainbow, no bouncing.
+- Captions: Montserrat ExtraBold 78px, white, 6px #1A1220 outline, bottom edge at y=1180px, 2-4 words per card, max 2 lines, ONE gold (#C9A24A) keyword per card (a number, a money word, or an emotion). Pop-in 4 frames. No karaoke rainbow, no bouncing.
 - Hook text: Anton, ALL CAPS, 96px, white with 8px #1A1220 outline, top third.
 - Palette only: ink #1A1220, cream #F6F0E8, plum #4A1F3D, gold #C9A24A, coral #E8553D (CTA only, max once per frame), sand #E9DCCB.
 - Grade: warm, clean, skin-first. Never orange skin.
 - Audio: voice -14 LUFS, peak -1 dBTP, music ducked to -18 dB under voice, max 3 SFX per 30s.
 - Hard cuts. Max 2 whip/match cuts per video. No dissolves.
-- End card 1.5s: plum background, cream Anton CTA, gold handle.
+- End card (optional) 1.5s, added AFTER the payoff: plum background, cream Anton CTA, gold handle. Skip it on loop reels.
 - Copy the formula, never the video: no other creator's script, voice, music edit or footage.
+- Brand deals: turn on the Paid Partnership label AND put #ad in the first line of the caption, plus a verbal "this is sponsored" or "ad" in the video.
+- Money and results claims: only real, documented results. If a result isn't typical, say the typical result on screen ("most clients see ..."). No income guarantees, ever.
 ```
 
 ---
@@ -77,7 +79,7 @@ Step by step, if you want control:
 ./reel.sh hook     3.mp4 4.mp4 "STOP UNDERCHARGING"    # hook text, 0-2.5s
 ./reel.sh captions 4.mp4 5.mp4 captions.srt            # house captions (srt from CapCut/Descript/OpusClip)
 ./reel.sh music    5.mp4 6.mp4 bed.mp3                 # ducked music
-./reel.sh endcard  6.mp4 7.mp4 "FOLLOW FOR PART 2" "@yourhandle"
+./reel.sh endcard  6.mp4 7.mp4 "FOLLOW FOR PART 2" "@yourhandle"   # optional, adds 1.5s after
 ./reel.sh loudness 7.mp4 8.mp4                         # -14 LUFS
 ./reel.sh export   8.mp4 final.mp4                     # IG/TikTok upload spec
 ```
@@ -89,13 +91,13 @@ Mark the gold keyword yourself in the .srt by wrapping it in `*asterisks*`.
 | Setting | Value |
 |---|---|
 | Project | 1080x1920, 30fps |
-| Caption preset | Montserrat ExtraBold, 78, white, stroke 6 #1A1220, no shadow, Y = 1180px from top (just below center) |
+| Caption preset | Montserrat ExtraBold, 78, white, stroke 6 #1A1220, no shadow. CapCut Y (text center) = 1140px from top, which puts the bottom edge at 1180 |
 | Keyword | #C9A24A, one word per card |
 | Hook text | Anton 96, ALL CAPS, stroke 8 #1A1220, top third, 0-2.5s, 4-frame fade-in |
 | Punch-in | 108-110%, 6-frame ease, on numbers and payoff |
 | Grade | Temp +6, Tint 0, Contrast +6, Sat +8, Shadows +4, skin check on vectorscope |
 | Audio | Voice normalize -14 LUFS, music -18 dB, auto-duck on |
-| Export | H.264, 1080x1920, 30fps, high bitrate, AAC 48k |
+| Export | H.264, 1080x1920, 30fps, high bitrate, AAC 48 kHz / 192 kbps |
 
 ---
 
@@ -190,8 +192,9 @@ Performance: says "{hook line}" while {action}. Natural blinks, natural mouth sh
 Keep identical across shots: face, hair, wardrobe, lighting direction.
 ```
 
-Meta, TikTok and Instagram require AI-generated people in ads to be labeled.
-Testimonials must come from real customers. Never generate a fake "customer review" video.
+Turn on TikTok's "AI-generated content" label for these. Meta adds its own "AI info" label when it detects AI.
+Never present an AI person as a real user, client or customer. Under the FTC endorsement rules that's
+a deceptive testimonial, whatever the platform's label says. Real testimonials come from real customers only.
 
 ---
 
@@ -243,7 +246,7 @@ are starters. Swap in your real numbers and story. A made-up number is a lie on 
 | 22 | Contrarian Flip | "Fake it till you make it? No. Price it till you believe it." |
 | 23 | The Statistic | "{N}% of {group} {fact}." *(cite the source in the caption)* |
 | 24 | The Reveal | "This is the new way to say no to discounts." |
-| 25 | Someone Else's Result | "One client of mine doubled her rate in {time}. Here's the exact sentence." *(with permission)* |
+| 25 | Someone Else's Result | "One client of mine doubled her rate in {time}. Here's the exact sentence." *(written permission; if it isn't typical, say so on screen)* |
 | 26 | The Superlative | "The fastest confidence boost isn't a mindset. It's a price." |
 
 Score hooks before you shoot:
@@ -259,6 +262,7 @@ Ask Claude: `/ig-reel score this hook: "your line"` (runs `hookscore.py`). Under
 - [ ] Payoff delivers what the hook promised; one CTA only; last line echoes the hook
 - [ ] Voice -14 LUFS (±1), no clipping, music not fighting the voice
 - [ ] Every number is real and sourced; no other creator's script, audio edit or footage
-- [ ] AI people or footage labeled where the platform requires it
+- [ ] AI people or footage labeled where the platform requires it; no AI person presented as a real customer
+- [ ] Brand deal? Paid Partnership label + #ad + verbal disclosure. Results claims typical or qualified
 - [ ] Sounds like you (checked against voice.md), not like a template
 - [ ] Export 1080x1920, 30fps, H.264, under 4GB
