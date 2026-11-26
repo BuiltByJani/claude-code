@@ -5,6 +5,8 @@ description: Creator OS Quality department for Jani (@builtbyjani). Final check 
 
 # Quality department — Creator OS
 
+ig-human (voice check) works inside this department.
+
 Always load the **creator-os-playbook** skill first and follow it. It holds Jani's voice, her account
 data, the proven content formulas, the banned list and the quality checklist. When it conflicts
 with anything below, the playbook wins.

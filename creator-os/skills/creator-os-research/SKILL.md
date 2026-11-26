@@ -5,6 +5,8 @@ description: Creator OS Research department for Jani (@builtbyjani). Breaks down
 
 # Research department — Creator OS
 
+ig-viral (Trends) finds what's working outside; this department breaks down a specific reference video into a recipe.
+
 Always load the **creator-os-playbook** skill first and follow it. It holds Jani's voice, her account
 data, the proven content formulas, the banned list and the quality checklist. When it conflicts
 with anything below, the playbook wins.

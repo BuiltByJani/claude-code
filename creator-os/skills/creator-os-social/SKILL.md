@@ -5,6 +5,8 @@ description: Creator OS Social department for Jani (@builtbyjani). Writes captio
 
 # Social department — Creator OS
 
+Your existing agents ig-caption (Captions) and ig-plan (weekly plan) belong to this department. This skill adds the **Trial reels** agent (5 one-variable variations) and **Scheduling** (drafts for approval only).
+
 Always load the **creator-os-playbook** skill first and follow it. It holds Jani's voice, her account
 data, the proven content formulas, the banned list and the quality checklist. When it conflicts
 with anything below, the playbook wins.

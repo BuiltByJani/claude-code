@@ -5,6 +5,8 @@ description: Creator OS Design department for Jani (@builtbyjani). Builds YouTub
 
 # Design department — Creator OS
 
+Your existing agents ig-carousel (Carousels) and ig-story (Stories) belong to this department. This skill adds the **YouTube** agent (long-form titles, description, chapters, thumbnail) and coordinates all three.
+
 Always load the **creator-os-playbook** skill first and follow it. It holds Jani's voice, her account
 data, the proven content formulas, the banned list and the quality checklist. When it conflicts
 with anything below, the playbook wins.
