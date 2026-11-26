@@ -156,6 +156,9 @@ brand with a phone and free AI…"). **Write like the winners, never like those.
 - **Emoji:** 🫶🏻 🙏🏻 🤲🏻 💞 ✝️ 🦋 💪🏻 😭 😂 🫂, 1–4 per caption at line ends.
   **Hashtags:** 2–5 at the end after ". . ." spacer lines (#becomingher #womeninspiringwomen
   #personalgrowth #builtbyjani).
+- **Credibility line:** allowed, but without her name and never as the first line. Put it after
+  the story has started, e.g. "People made fun of my lips my whole life. Now women pay for them."
+  Her handle is already on screen.
 - **Openers that worked:**
   - The raw line itself: "I don't cry for me… I'm not a victim."
   - "The ladies say I need to… 😬"
@@ -166,7 +169,8 @@ brand with a phone and free AI…"). **Write like the winners, never like those.
   The offer is last and short: "Comment BLUEPRINT…" / "Comment WORTH…"
 - **Never:**
   - "I'm Jani." as the first line, or tidy brand-statement openers.
-  - Numerals for style ("1 phone", "1 kept promise").
+  - Numerals for style in captions and scripts ("1 phone", "1 kept promise"). On-screen text may
+    use digits ("2 words"), because they read faster.
   - Corporate words: asset, leverage, strategy, unlock, game-changer, dive in.
   - Fear-selling.
 - **Typos:** keep her slang ("Ima", "lol", "na") but fix real typos before posting.

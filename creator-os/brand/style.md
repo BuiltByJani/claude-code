@@ -47,6 +47,7 @@ brand with a phone and free AI…") read as AI-written, and they are her worst p
 - **How to end:** one human line ("Send this to a woman who saved herself."), or faith, or "Watch
   me." If there's an offer, it comes after the story and stays short: "Comment BLUEPRINT…" /
   "Comment WORTH…". Story-first posts with a soft CTA beat CTA-first posts every time in her data.
+- **Credibility line:** allowed without her name, after the story starts, never first.
 - **Typos:** keep her cadence and slang ("Ima", "lol", "na"), but Quality fixes real typos
   ("Common blueprint" → "Comment", "nee things" → "new things") before posting.
 
@@ -79,3 +80,4 @@ brand with a phone and free AI…") read as AI-written, and they are her worst p
 ## Changelog (Brand adds one line per update, with the feedback it came from)
 - 2026-11-26: Voice section filled from 114 real captions; Do/Don't from Instagram data in
   feedback.jsonl (growth notes 1–3).
+- 2026-11-26: Credibility line allowed without her name, after the first line. Digits OK in on-screen text.
