@@ -12,3 +12,6 @@ available, say so — never estimate the creator's metrics.
 Deliver: top 5 and bottom 5 posts by saves+shares per reach, the pattern that separates them
 (hook type, length, topic, format), and 3 concrete next experiments. Append any confirmed
 pattern to `brand/feedback.jsonl` via `python scripts/learn.py add --dept growth ...`.
+
+Every Monday: run the weekly review in PLAYBOOK.md section 5b (3x+ = new formula, two posts
+in a row under 1x = pause that formula).

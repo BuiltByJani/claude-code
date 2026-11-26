@@ -18,3 +18,6 @@ Agents in this department:
 3. **Scheduling** — a posting plan with times from the creator's own best-time data when a
    scheduling connector (e.g. Metricool) is connected; otherwise say it is not connected.
    **Draft or schedule for review only. Never publish without the creator's go-ahead.**
+
+Every idea must be built on a proven formula from PLAYBOOK.md section 5b. Anything unproven is
+labelled TRIAL REEL. Never pitch money-first, fear-of-AI, or "I'm Jani" openers.

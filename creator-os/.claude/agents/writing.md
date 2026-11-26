@@ -20,3 +20,6 @@ Deliver for each video:
 
 Self-check before returning: read it aloud in the creator's cadence. Cut any word they would
 not say. No generic AI phrasing ("unlock", "game-changer", "dive in", "in today's world").
+
+Every idea must be built on a proven formula from PLAYBOOK.md section 5b. Anything unproven is
+labelled TRIAL REEL. Never pitch money-first, fear-of-AI, or "I'm Jani" openers.

@@ -177,6 +177,33 @@ brand with a phone and free AI…"). **Write like the winners, never like those.
 
 ---
 
+## 5b. Content strategy, locked in Nov 26 2026 (Jani: "take the advice, no more ideas that flop")
+Her median reel gets about 1,190 views. A post at **3x or more** (3,500+) is a proven winner.
+**Every new idea must be built on one of these proven formulas.** If it isn't, it doesn't go
+on the calendar. Anything new or unproven is posted as a **trial reel** first (shown to
+non-followers only), never straight to the main feed.
+
+| Formula | Proof (her own posts) | How the edit should feel |
+|---|---|---|
+| Raw confession, "not a victim" | "I don't cry for me…" 6.7x, 44 s avg watch | Raw talking head, minimal cuts, word-by-word captions, one punch-in, soft piano |
+| Dating / love / "my heart is still soft" | Dating 5.5x, 90s love 4.1x, heart still pure 4.1x | Playful: cuts every 2 s, pop sound effects, reaction zooms, light trending audio |
+| Grief + faith ("I asked God why") | Sister anniversary 4.5x, "I used to ask God why" 3.7x | Very minimal, natural light, no music on line 1, then soft strings |
+| Callout ("Sir, I already saved myself") | 3.5x | Bold kinetic hook text slamming in word by word, whoosh, then calm talking head |
+| Short faith prayer / one-line truth | "Lord, please give me the motivation…" 3.4x; "Yeah. This one." 54 shares | Cinematic, slow, big serif text, built for shares |
+| Honest comeback (gym, fell off, getting back up) | "Gained 30 pounds" 3.0x | Real B-roll, cuts on the beat, one speed ramp, honest colour; run it as a series |
+| Story with a "they told me NO" moment | License appeal (buried in a caption, 2.5x); never told as the lead | Dark grade for the NO, warm for the win, silence or record-scratch on NO, riser into the win |
+
+**Stop making:** money/offer-first reels, "your job will be replaced by AI/robots" fear posts,
+"2027 money skill" style posts, "I'm Jani…" openers, reposts of the same video, more than
+1–2 posts a day. Money content only works *after* a story, as a short CTA.
+
+**Weekly review (Growth + Brand, every Monday):** pull the last 7 days. Any post at 3x+
+becomes a formula (add it to this table with its proof). Any formula with two posts in a row
+under 1x gets paused. Write the result to `brand/feedback.jsonl` and tell Jani in 5 lines.
+
+The first week built on this (Dec 1–7, 2026) is in Notion → NEW2027, status "Waiting on
+Jani". Two need her input before filming: the dating update and the new memory of her sister.
+
 ## 6. The ig-viral standard (all content)
 - Hook in the first 1–2 seconds: a visual change plus a line that creates tension or emotion.
 - One idea per video.
