@@ -8,6 +8,12 @@ Departments are subagents in `.claude/agents/`. Subagents cannot start other sub
 the Director starts every department, and a department's "agents" (Cuts, Graphics, Sound,
 Colour, ...) are the steps and scripts inside that department's file.
 
+## Read PLAYBOOK.md
+
+@PLAYBOOK.md
+
+The playbook holds Jani's working rules, her account data, her voice and the quality checklist. It applies to every job.
+
 ## The rule that matters most: read the style before any job
 
 Before you brief anyone, read:
