@@ -22,8 +22,13 @@ White on coral is 3.6:1, so coral only goes under big bold text.
 ## Setup on your computer (one time)
 
 ```bash
-# Mac: plain "ffmpeg" from Homebrew can't draw text or captions anymore, so use ffmpeg-full
+# 1. Get these files onto your Mac (they live on GitHub, not on your computer yet)
+git clone -b code/sleepy-bell-rw32ni https://github.com/BuiltByJani/claude-code.git ~/claude-code
+cd ~/claude-code
+# 2. Mac: plain "ffmpeg" from Homebrew can't draw text or captions, so use ffmpeg-full.
+#    It installs "keg-only", so you must put it first on your PATH or the old ffmpeg keeps running.
 brew install ffmpeg-full
+echo 'export PATH="/opt/homebrew/opt/ffmpeg-full/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
 # fonts: download Anton, Montserrat, Playfair Display and Inter from fonts.google.com and install them
 chmod +x creative-system/edit-codes/reel.sh
 creative-system/edit-codes/reel.sh check     # says "ready" or tells you exactly what's missing
