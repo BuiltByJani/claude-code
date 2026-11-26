@@ -8,6 +8,17 @@ One script per hook. Each one exports a 1080×1920, 30 fps H.264 MP4 with your a
 | 2. Vanish | `hook2_vanish.py` | Your empty clothes lie on the couch. Your glasses float up, then your body fills in from the clothes outward with a glowing edge |
 | 3. Sticker Peel | `hook3_sticker_peel.py` | You pop in as a die-cut sticker, then a white paper flap peels bottom to top and reveals you talking |
 
+## 📌 Command pin
+
+Every hook code's command and what it does. When a hook code is added or changed, its row is added here and on the Notion page "Command Pin: visual hook codes" the same day.
+
+| Hook | Command | What it does |
+|---|---|---|
+| Orbit 360 | `python hook1_orbit360.py --clip orbit.mov --land 2.4 --out hook1.mp4` | Speeds up the camera swing round you with motion blur, lands on your face, punches in, then plays your talking take with audio. `--land` = second the camera stops in front of you. |
+| Vanish | `python hook2_vanish.py --empty empty.mov --clothes clothes.mov --glasses glasses.mov --talking talk.mov --out hook2.mp4` | Opens on your empty clothes, glasses float up, then your body fills in from the clothes with a glowing edge. `--glasses` is optional. |
+| Sticker Peel | `python hook3_sticker_peel.py --empty empty.mov --talking talk.mov --out hook3.mp4` | You pop in as a die-cut sticker, then a paper flap peels bottom to top and reveals you talking. |
+| 5-second test | add `--end 7.4` (Orbit 360, with `--land 2.4`) or `--talk-end 5` (Vanish, Sticker Peel) | Renders a short test before the full take. |
+
 ## Setup (once, on your computer)
 ```bash
 # Mac
