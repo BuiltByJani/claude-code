@@ -1,0 +1,12 @@
+library/*
+!library/.gitkeep
+inbox/*
+!inbox/.gitkeep
+exports/*
+!exports/.gitkeep
+brand/references/*/media/
+*.mp4
+*.mov
+*.wav
+__pycache__/
+.venv/
