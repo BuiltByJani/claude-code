@@ -129,7 +129,7 @@ punch-in per 6 s"). Never invent a preference she didn't express.
   - 114 posts in 28 days (up to 10 a day) and only 0.4% saves.
   - Reposting the same video crashes it: "I spent my entire twenties…" was posted 3 times and got
     3,038, then 667, then 122 views.
-- **Rules from this:** never open with her name; story first, offer last; 1–3 strong posts a
+- **Rules from this:** never open with her name; story first, offer last; 1–2 strong posts a
   day, each with a reason to save or share; never repost an identical video.
 
 ---
@@ -147,7 +147,7 @@ brand with a phone and free AI…"). **Write like the winners, never like those.
 - **Faith where it's natural:** "But with God, all things would work out. 🫶🏻🤲🏻", "Thank you
   Jesus…"
 - **Honest about now:** "I'm still healing. I'm still figuring shit out."
-- **Defiant, censored swearing:** "F*ck him. Ima be rich, you watch!", "get the f*ck up!"
+- **Defiant swearing, ALWAYS censored in captions and on-screen text (f*ck, sh*t); saying it out loud in a video is fine:** "F*ck him. Ima be rich, you watch!", "get the f*ck up!"
 - **Her phrases:** "Nothing changes if nothing changes", "1% better everyday", "BECOME / becoming
   her", "play your cards or they will play you", "the word NO only exists if you allow it", "Not
   a victim", "turning my mess into a message", "Watch me.", "You got this 💪🏻", "PS." endings
@@ -168,11 +168,13 @@ brand with a phone and free AI…"). **Write like the winners, never like those.
 - **Endings:** one human line ("Send this to a woman who saved herself."), faith, or "Watch me."
   The offer is last and short: "Comment BLUEPRINT…" / "Comment WORTH…"
 - **Never:**
-  - "I'm Jani." as the first line, or tidy brand-statement openers.
+  - "I'm Jani" anywhere (not as the opener, not mid-caption, not in scripts), or tidy
+    brand-statement openers. Her handle is already on screen.
   - Numerals for style in captions and scripts ("1 phone", "1 kept promise"). On-screen text may
     use digits ("2 words"), because they read faster.
   - Corporate words: asset, leverage, strategy, unlock, game-changer, dive in.
   - Fear-selling.
+  - Any word on the never list in section 5c (jail, addiction, etc.). Use the approved swaps.
 - **Typos:** keep her slang ("Ima", "lol", "na") but fix real typos before posting.
 
 ---
@@ -203,6 +205,45 @@ under 1x gets paused. Write the result to `brand/feedback.jsonl` and tell Jani i
 
 The first week built on this (Dec 1–7, 2026) is in Notion → NEW2027, status "Waiting on
 Jani". Two need her input before filming: the dating update and the new memory of her sister.
+
+## 5c. Niche, content mix and the story vault (locked in Nov 27 2026)
+**Niche:** Becoming Her. Helping women who have been through hell rebuild their self-worth, faith
+and confidence, and get paid for who they already are. Her story is the PROOF, not the business.
+AI is a tool she shows (how she runs her business, Paid To Be You), never her identity.
+
+**Every story post follows: her story -> the lesson -> what it means for HER.** The last line is
+always about the viewer, never about Jani. A story with no lesson for her does not get posted.
+
+**Weekly mix:** 40% story -> lesson · 40% self-worth and confidence for her (dating, comparison,
+titi-mom life, faith, starting over, the gym) · 20% behind the business (AI, Paid To Be You), only
+after a story or lesson, never cold.
+
+**Women, not men:** open by talking to her ("Ladies…", "If you're a woman who…", "To the girl
+who…"); choose topics only women live; never cold "make money online / passive income / AI hustle"
+language (say "get paid for who you are"); reply to women's comments first; don't engage male DMs
+or comments; women-focused hashtags.
+
+**Words that NEVER appear on Instagram** (captions, on-screen text, scripts, comments, DMs, bio):
+jail, prison, incarcerated, locked up, addiction, addict, relapse, drugs, rehab.
+Approved swaps (pick what fits the sentence):
+- jail / prison → "a season where I paid for my choices", "the year I lost my freedom", "when I was away"
+- addiction → "numbing pain I didn't know how to carry", "coping the wrong way", "my darkest season"
+- sobriety / recovery → "choosing a clear mind", "healing", "getting my life back"
+- "pissing in a cup", court-ordered anything → leave it out
+
+**The story vault (Instagram vs. book/podcast):**
+| Topic | Instagram | Book / podcast only |
+|---|---|---|
+| Mental health (anxiety, depression, PTSD) | Yes, honest and present-tense ("I still have heavy days") | Clinical details, diagnoses, history |
+| Judgement, no friends, family doubting her | Yes | Specific names and fights |
+| Her sister's death and raising her niece | Yes, with care; never details of the murder | The case, the night, the details |
+| The season she paid for her choices | Only with the approved swaps, briefly, as a turning point | Everything else |
+| Coping the wrong way | Only with the approved swaps | Everything else |
+| What happened at 13 | Never in detail. At most, rarely, "something happened to me at 13 that no child should go through", and only when Jani chooses it | All of it |
+Never post anything about the vault topics for pity, never graphic, never in an offer, bio or
+Paid To Be You. If unsure whether something belongs in the vault, it does: ask Jani.
+Any post touching sexual assault includes a resource line (e.g. "If this is your story too, RAINN:
+1-800-656-4673") and comments are filtered.
 
 ## 6. The ig-viral standard (all content)
 - Hook in the first 1–2 seconds: a visual change plus a line that creates tension or emotion.

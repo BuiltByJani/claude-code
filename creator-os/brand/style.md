@@ -66,6 +66,9 @@ brand with a phone and free AI…") read as AI-written, and they are her worst p
 - Carousel: 1080×1350, 8 slides default
 - Stories: 1080×1920
 
+## Never on Instagram (Nov 27)
+- jail, prison, incarcerated, locked up, addiction, addict, relapse, drugs, rehab. See PLAYBOOK 5c for approved swaps and the story vault.
+
 ## Do
 - Lead with the emotional truth in the first line and the first 1–2 seconds of video.
 - Story first, lesson second, offer last (if at all).
@@ -81,3 +84,4 @@ brand with a phone and free AI…") read as AI-written, and they are her worst p
 - 2026-11-26: Voice section filled from 114 real captions; Do/Don't from Instagram data in
   feedback.jsonl (growth notes 1–3).
 - 2026-11-26: Credibility line allowed without her name, after the first line. Digits OK in on-screen text.
+- 2026-11-27: Niche locked (Becoming Her), 40/40/20 mix, story -> lesson -> for HER rule, never-list words and story vault (PLAYBOOK 5c), from Jani.
