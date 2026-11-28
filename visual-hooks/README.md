@@ -72,12 +72,3 @@ python hook3_sticker_peel.py --empty empty.mp4 --talking talk.mp4 --out hook3.mp
 Memory use stays under about 1 GB however long the take is, because frames are streamed straight into the encoder.
 
 Add text and captions in CapCut after export. The scripts leave the frame clean so your caption style stays yours.
-
-## Reference looks (Nov 28 2026): `looks.py`
-
-| Look | Command | She films |
-| --- | --- | --- |
-| Tutorial card | `python looks.py tutorial-card --main talk.mov --card screen.mov --title "HOW I DO THIS..." --wash blush --font "Permanent Marker" --out card.mp4` | Close-up, face in the top-left third; plus a second take or a screen recording |
-| Tool strip | `python looks.py tool-strip --main talk.mov --logos a.png b.png c.png --labels CLAUDE CANVA CAPCUT --keyword "MY EDITING TEAM" --font "Anton" --out strip.mp4` | Lie back on the couch or sit low so her head is below the 40% line; point up at the tiles |
-
-Add `--seconds 5` to test first. Washes: blush, plum, teal, gold (never red or orange). Use logo files you have the rights to (the official press-kit logos for tools you actually use).
