@@ -1,6 +1,6 @@
 // Jani's reference looks (Nov 28 2026). Transparent 1080x1920 overlays for her own footage.
 // Technique only: built fresh, nobody's footage, fonts or words copied.
-// Palette: cream, blush, gold, plum, teal. Never red or orange.
+// Any colour works (Jani, Nov 28: "I love red, pink, blue, green, all colors"). Bright colours get a shadow so they stay readable.
 import {
   AbsoluteFill,
   CalculateMetadataFunction,
@@ -23,7 +23,13 @@ export const COLORS = {
   gold: "#E2B95C",
   plum: "#5B2A4E",
   teal: "#2F6F6B",
-  lime: "#D7F24A", // one-off accent only (Bright Title), never for captions
+  lime: "#D7F24A",
+  red: "#E5383B",
+  pink: "#FF4FA3",
+  blue: "#2F80ED",
+  green: "#27AE60",
+  white: "#FFFFFF",
+  black: "#111111",
 } as const;
 type ColorName = keyof typeof COLORS;
 

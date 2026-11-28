@@ -27,8 +27,9 @@ npx remotion render src/index.ts BrightTitle out/title.mov --codec=prores --pror
 
 Preview and tweak live: `npx remotion studio`.
 
-Props: `durationInSeconds`, colours from cream / blush / gold / plum / teal (lime only as a one-off
-accent on Bright Title, never red or orange), `topPx` >= 250 to stay out of the top UI zone.
+Props: `durationInSeconds`, any colour: cream, blush, gold, plum, teal, lime, red, pink, blue, green,
+white, black (Jani loves all colours; pick a different colour story per Reel), `topPx` >= 250 to stay
+out of the top UI zone.
 Fonts: Anton and Playfair Display Italic (Google Fonts, free).
 
 Tested Nov 28: each composition renders; ProRes 4444 export has an alpha channel, 1080x1920, 30 fps.
